@@ -45,7 +45,7 @@ const DoctorSection = () => {
                 className="lg:basis-1/3 md:basis-1/2 basis-1/1 sm:basis-1/2 "
                 key={doctor.id}
               >
-                  <DoctorCard key={doctor.id} doctor={doctor} />
+                  <DoctorCard key={doctor.id} doctor={doctor} layer={true} />
              
               </CarouselItem>
             ))}
