@@ -21,41 +21,40 @@ const DepartmentSection = () => {
       <Container>
         <div className="flex items-center justify-between mb-3 md:mb-4">
           <h2 className="text-black/80 text-[20px] leading-7 md:text-[32px] md:leading-8 font-bold">
-            Şöbələr{" "}
+            Xidmətlərimiz{" "}
           </h2>
-          <LinkButton text="Hamısı" href="/media" />
+          <LinkButton text="Hamısı" href="/services" />
         </div>
 
-      <Carousel
-        opts={{
-          loop: true,
-          align: "start",
-          containScroll: "trimSnaps",
-          dragFree: true,
-        }}
-        autoPlay
-        delay={3000}
-        className="w-full mt-4 max-w-[93vw] md:mt-6"
-      >
-        <CarouselContent >
-          {partners?.length &&
-            partners.map((partner) => (
-              <CarouselItem
-                className="lg:basis-1/4 md:basis-1/3 basis-1/2 "
-                key={partner.id}
-              >
-                <DepartmentCard
-                  img={partner.img}
-                  name={partner.name}
-                  text={partner.text}
-                  link={"#"}
-                />
-              </CarouselItem>
-            ))}
-        </CarouselContent>
-      </Carousel>
+        <Carousel
+          opts={{
+            loop: true,
+            align: "start",
+            containScroll: "trimSnaps",
+            dragFree: true,
+          }}
+          autoPlay
+          delay={3000}
+          className="w-full mt-4 max-w-[93vw] md:mt-6"
+        >
+          <CarouselContent>
+            {partners?.length &&
+              partners.map((partner) => (
+                <CarouselItem
+                  className="lg:basis-1/4 md:basis-1/3 basis-1/2 "
+                  key={partner.id}
+                >
+                  <DepartmentCard
+                    img={partner.img}
+                    name={partner.name}
+                    text={partner.text}
+                    link={partner.link}
+                  />
+                </CarouselItem>
+              ))}
+          </CarouselContent>
+        </Carousel>
       </Container>
-    
     </div>
   );
 };
@@ -65,30 +64,30 @@ export default DepartmentSection;
 const partners = [
   {
     id: 1,
-    name: "Radiologiya",
-    img: <Radiologiya />, //Radiologiya,
-    text: "Müasir radiologiya ilə sürətli və etibarlı nəticə əldə edilir.",
-    link: "/media",
+    name: "Üz və bədən estetikası",
+    img: <Radiologiya />, 
+    text: "Dəri problemlərinin müalicəsi (akne, pigmentasiya, çapıq və s.)",
+    link: "/services/1",
   },
   {
     id: 2,
-    name: "Urologiya",
+    name: "Dəri problemlərinin müalicəsi",
     img: <Urolog />,
-    text: "Urologiya şöbəmiz dəqiq və effektiv müalicə təqdim edir.",
-    link: "/media",
+    text: "İnyeksiyon prosedurlar (botoks, dolğu və s.)",
+    link: "/services/2",
   },
   {
     id: 3,
-    name: "İlkin yardım",
+    name: "İnyeksiyon prosedurlar",
     img: <FirstHelp />,
-    text: "Yardım şöbəmiz peşəkar ilkin yardım göstərir.",
-    link: "/media",
+    text: "İnyeksiyon prosedurlar",
+    link: "/services/3",
   },
   {
     id: 4,
-    name: "Labarotoriya",
+    name: "Aparat kosmetologiyası",
     img: <Lab />,
-    text: "Laboratoriya sürətli və etibarlı analizlər təqdim edir.",
-    link: "/media",
+    text: "Aparat kosmetologiyası",
+    link: "/services/4",
   },
 ];

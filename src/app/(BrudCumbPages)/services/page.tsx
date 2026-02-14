@@ -26,7 +26,7 @@ const Services = async ({
               key={index}
               name={partner.name}
               text={partner.text}
-              link={"#"}
+              link={partner.link}
             />
           ))}
         </div>
@@ -58,30 +58,30 @@ export default Services;
 const partners = [
   {
     id: 1,
-    name: "Radiologiya",
-    img: <Radiologiya />, //Radiologiya,
-    text: "Müasir radiologiya ilə sürətli və etibarlı nəticə əldə edilir.",
-    link: "/media",
+    name: "Üz və bədən estetikası",
+    img: <Radiologiya />, 
+    text: "Dəri problemlərinin müalicəsi (akne, pigmentasiya, çapıq və s.)",
+    link: "/services/1",
   },
   {
     id: 2,
-    name: "Urologiya",
+    name: "Dəri problemlərinin müalicəsi",
     img: <Urolog />,
-    text: "Urologiya şöbəmiz dəqiq və effektiv müalicə təqdim edir.",
-    link: "/media",
+    text: "İnyeksiyon prosedurlar (botoks, dolğu və s.)",
+    link: "/services/2",
   },
   {
     id: 3,
-    name: "İlkin yardım",
+    name: "İnyeksiyon prosedurlar",
     img: <FirstHelp />,
-    text: "Yardım şöbəmiz peşəkar ilkin yardım göstərir.",
-    link: "/media",
+    text: "İnyeksiyon prosedurlar",
+    link: "/services/3",
   },
   {
     id: 4,
-    name: "Labarotoriya",
+    name: "Aparat kosmetologiyası",
     img: <Lab />,
-    text: "Laboratoriya sürətli və etibarlı analizlər təqdim edir.",
-    link: "/media",
+    text: "Aparat kosmetologiyası",
+    link: "/services/4",
   },
 ];

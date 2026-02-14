@@ -1,64 +1,5 @@
 
-// Projects
 
-export type ProjectParams = {
-  count?: number;
-  isActive?: boolean;
-  isVisible?: boolean;
-  excludeCode?: string;
-  isMain?: boolean;
-  statusId?: number;
-};
-
-export type ProjectCardTypes = {
-  id: number;
-  order?: number;
-  code?: string;
-  title?: string;
-  budget?: number;
-  currencyName?: string;
-  isActive?: boolean;
-  statusId: number;
-};
-
-export type ProjectCardProps = Omit<ProjectCardTypes, "id"> & {
-  reverse?: boolean
-}
-
-export type ProjectType = {
-  id: number;
-  title: string;
-  description: string;
-  currencyName: string;
-  budget: number;
-  categoryName: string;
-  deadline: string;
-  strategicGoal: string;
-  isActive: boolean;
-  statusId: number;
-};
-
-export type ProjectApplyType = {
-  initiatorFullname: string;
-  contactNumber: string;
-  email: string;
-  tin: string;
-  note: string;
-};
-
-export interface ProjectApplyBodyType extends ProjectApplyType {
-  token: string;
-  projectId: number;
-}
-
-export type ProjectApplyErrors = {
-  [K in keyof ProjectApplyType]?: string;
-};
-
-export type ProjectApplyInitialValueType = {
-  errors: ProjectApplyErrors;
-  values: ProjectApplyType | null;
-};
 
 export type ProjectStatisticsType = {
   activeProjects: number;
@@ -66,10 +7,6 @@ export type ProjectStatisticsType = {
   totalProjects: number;
 };
 
-export type ValidateProjectApplyModalReturnType = {
-  isValid: boolean;
-  data?: ProjectApplyInitialValueType;
-};
 
 // Offers Type
 export type OfferType = {
@@ -170,3 +107,19 @@ export type AboutUsType = {
   title: string;
   description: string;
 };
+
+
+
+
+//
+export interface IDoctorData{
+  id: number;
+  name: string;
+  specialty: string;
+  image: string;
+  experience: number;
+  patients: number;
+  rating: number;
+  description: string;
+  shortDescription: string;
+}

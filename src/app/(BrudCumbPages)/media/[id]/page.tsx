@@ -22,7 +22,7 @@ type Props = {
 
 const NewsDetail = async ({ params }: Props) => {
   const { id } = await params;
-
+console.log(id)
   return (
     <Container>
       <DetailContent code={id}/>

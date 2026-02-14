@@ -1,12 +1,8 @@
 import Container from "@/components/shared/Container";
-import { Button } from "@/components/ui/button";
 // import { getMedias } from "../data";
-import Link from "next/link";
-import NextIcon from "@/assets/icons/down-arrow.svg";
-import PrevIcon from "@/assets/icons/up-arrow.svg";
-import NewsScard from "@/modules/home/components/NewsScard";
+
 import DoctorCard from "../home/components/DoctorCard";
-import { doctors } from "../home/data/doctors";
+import doctors from "@/data/doctors.json";
 
 interface MediasPageProps {
   page: number;

@@ -40,7 +40,7 @@ const Footer = () => {
                 </div>
                 <div className="w-6 h-6 rounded-[50%] bg-primary flex justify-center items-center">
                   <a
-                    href="https://youtube.com"
+                    href="https://www.instagram.com/chohreestetic?igsh=MWVudHFqOW81dGh1dw=="
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -49,7 +49,7 @@ const Footer = () => {
                 </div>
                 <div className="w-6 h-6 rounded-[50%] bg-primary flex justify-center items-end">
                   <a
-                    href="https://youtube.com"
+                    href="https://www.facebook.com/share/175BwgZKWr/?mibextid=wwXIfr"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -59,7 +59,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="md:col-span-2 flex justify-end ">
+            <div className="md:col-span-2 flex md:justify-end ">
               <div className="flex flex-col">
                 <h4 className="font-medium mb-1 text-[16px] leading-6 text-black/80">
                   Klinika

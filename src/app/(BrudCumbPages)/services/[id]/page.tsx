@@ -1,15 +1,12 @@
 // import seo from "@/lib/seo";
 import Container from "@/components/shared/Container";
-import DoctorList from "@/modules/doctors/DoctorList";
-import MediaList from "@/modules/media/containers/MediaList";
-import { Metadata } from "next";
 import Image from "next/image";
 
 // export const metadata: Metadata = seo({
 //   title: "Media | Layihə Hovuzu",
 // });
 
-const About = () => {
+const ServiceDetail = () => {
   return (
     <Container>
       <div className="pb-8 md:pb-12">
@@ -23,14 +20,14 @@ const About = () => {
     className="w-full h-auto object-contain"
   />
     </div> */}
-<div className="col-span-1 relative aspect-[4/3] md:aspect-auto md:h-full">
-  <Image
-    src="/images/mainSection.jpg"
-    alt="about"
-    fill
-    className="object-cover rounded-lg"
-  />
-</div>
+          <div className="col-span-1 relative aspect-4/3 md:aspect-auto md:min-h-[calc(100vh-25rem)]">
+            <Image
+              src="/images/mainSection.jpg"
+              alt="about"
+              fill
+              className="object-cover rounded-lg"
+            />
+          </div>
 
           <div className="md:col-span-2 rounded-lg px-4 border border-primary/12 p-3 md:px-5 text-text font-sm font-normal leading-5">
             <div>
@@ -66,20 +63,7 @@ const About = () => {
                 <li>• Yüksək pasiyent məmnuniyyəti</li>
               </ul>
             </div>
-            <div className="mt-3">
-              <h3 className="font-semibold font-base leading-6 mb-1 text-black/80">
-                Klinikanın əsas xidmətləri
-              </h3>
-              <ul>
-                <li>• Üz və bədən estetikası</li>
-                <li>
-                  • Dəri problemlərinin müalicəsi (akne, pigmentasiya, çapıq və
-                  s.)
-                </li>
-                <li>• İnyeksiyon prosedurlar (botoks, dolğu və s.)</li>
-                <li>• Aparat kosmetologiyası</li>
-              </ul>
-            </div>
+           
             <div className="mt-3">
               <p>
                 Çöhrə Estetik Klinika, gözəlliyinə və sağlamlığına dəyər verən
@@ -94,4 +78,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default ServiceDetail;

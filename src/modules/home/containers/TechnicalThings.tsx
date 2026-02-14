@@ -6,7 +6,6 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import React from "react";
 
 const TechnicalThings = () => {
   return (
@@ -16,7 +15,7 @@ const TechnicalThings = () => {
           <h2 className="text-black/80 text-[20px] leading-7 md:text-[32px] md:leading-8 font-bold">
             Yüksək Təchizat{" "}
           </h2>
-          <LinkButton text="Hamısı" href="/media" />
+          <LinkButton text="Hamısı" href="/galery" />
         </div>
 
         <div className="hidden md:grid grid-cols-12 gap-4">

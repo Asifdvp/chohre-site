@@ -26,7 +26,7 @@ const NewsDetail = async ({ params }: Props) => {
 
   return (
     <Container>
-      <DoctorDetailContent code={id}/>
+      <DoctorDetailContent id={id} />
       {/* <DetailContent code={id} />
       <OtherNews code={id} /> */}
     </Container>

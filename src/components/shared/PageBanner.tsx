@@ -22,7 +22,11 @@ const PageBanner = () => {
           {/* Əgər child yoxdursa title aktivdir */}
           <Link
             href={`/${splitPath[1]}`}
-            className={!splitPath[2] ? "text-black " : "hover:text-black transition-colors ease-in-out duration-300"}
+            className={
+              !splitPath[2]
+                ? "text-black "
+                : "hover:text-black transition-colors ease-in-out duration-300"
+            }
           >
             {bannerData[splitPath[1]]?.title}
           </Link>
@@ -37,11 +41,13 @@ const PageBanner = () => {
           )}
         </p>
         {/* {crumbs} */}
-
-
-        <h1 className="text-[20px] text-black/80  leading-7 font-bold md:text-[32px] md:leading-10 mb-3 md:mb-4">
-          {bannerData[splitPath[1]] && !splitPath[2] &&  bannerData[splitPath[1]]?.title}
-        </h1>
+        {bannerData[splitPath[1]]?.isVisible && (
+          <h1 className="text-[20px] text-black/80  leading-7 font-bold md:text-[32px] md:leading-10 mb-3 md:mb-4">
+            {bannerData[splitPath[1]] &&
+              !splitPath[2] &&
+              bannerData[splitPath[1]]?.title}
+          </h1>
+        )}
       </Container>
     </div>
   );
@@ -50,24 +56,29 @@ const PageBanner = () => {
 export default PageBanner;
 
 const bannerData: {
-  [key: string]: { title: string; child?: string };
+  [key: string]: { title: string; child?: string; isVisible?: boolean };
 } = {
   media: {
     title: "Xəbərlər",
     child: "Xəbər",
+    isVisible: true,
   },
   doctors: {
     title: "Həkimlər",
     child: "Həkim",
+    isVisible: true,
   },
   services: {
     title: "Xidmətlər",
     child: "Xidmət",
+    isVisible: true,
   },
   about: {
     title: "Haqqımızda",
+    isVisible: true,
   },
   galery: {
     title: "Qalereya",
+    isVisible: false,
   },
 };

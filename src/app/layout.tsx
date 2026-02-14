@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${font.className} antialiased pointer-events-auto!`}>
         <Navbar />
-        <main className="min-h-[calc(100vh-12rem)] md:min-h-[calc(100vh-16rem)]">
+        <main className="min-h-[calc(85vh-12rem)] md:min-h-[calc(100vh-16rem)]">
           {children}
         </main>
         <DynamicFooter />

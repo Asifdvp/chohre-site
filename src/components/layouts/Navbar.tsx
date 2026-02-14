@@ -80,7 +80,7 @@ const Navbar = () => {
                 <Link href={"/media"}>Xəbərlər</Link>
               </div>
               <div className="menu-item">
-                <Link href={"/projects"}>Qalereya</Link>
+                <Link href={"/galery"}>Qalereya</Link>
               </div>
               <div className="menu-item">
                 <Link href="/media">Əlaqə</Link>

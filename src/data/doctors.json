@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "Leyli Məmmədova",
+    "specialty": "Kosmetoloq-konsultant",
+    "image": "/images/leyli.jpeg",
+    "experience": 12,
+    "patients": 200,
+    "rating": 4.9,
+    "shortDescription": "Uzun illər təcrübəyə malik, estetik və aparat kosmetologiyası sahəsində ixtisaslaşmış həkim-kosmetoloq. Yerli və beynəlxalq təlimlərdə iştirak edərək müasir yanaşmalarla pasiyentlərə xidmət göstərir.",
+    "description": "<div class=\"space-y-3 text-sm leading-5 font-normal text-text\">\n  <div>\n    <h2 class=\"text-base leading-6 font-semibold text-black/80 md:text-[18px]\">Leyli Məmmədova</h2>\n  <p class=\"font-medium mb-3\">Həkim-endokrinoloq</p>\n       \n    <h3 class=\" text-sm leading-5 md:text-base md:leading-6 font-semibold text-black/80 mb-1\">Haqqında</h3>\n    <p>Mən Məmmədova Leyli Mikayıl qızı 1968-ci ildə Şəki şəhərində ziyalı ailəsində anadan olmuşam. 1974-cü ildə Şəki şəhər 10 №-li məktəbin I sinfinə qəbul olub, 1984-cü ildə həmin məktəbin X sinfini bitirmişəm.</p>\n  </div>\n  <div>\n    <h3 class=\"text-sm leading-5 md:text-base md:leading-6 font-semibold text-black/80 mb-1\">Təhsil və Karyera</h3>\n    <ul class=\"list-disc pl-5 space-y-1\">\n      <li>1987–1991 — Şəki Orta İxtisas Musiqi Texnikumu (Fortepiano müəllimi)</li>\n      <li>2000–2006 — ABU Tibb Fakültəsi (Həkim)</li>\n      <li>2006–2007 — ABU Klinikası (İnternatura)</li>\n      <li>Həkim-endokrinoloq ixtisası</li>\n    </ul>\n  </div>\n  <div>\n    <h3 class=\"text-sm leading-5 md:text-base md:leading-6 font-semibold text-black/80 mb-1\">İş Təcrübəsi</h3>\n    <ul class=\"list-disc pl-5 space-y-1\">\n      <li>2007–2012 — Fransız Silüeti</li>\n      <li>2012–2016 — Medholding Estetik Klinikası</li>\n      <li>2016–2019 — Moon Light Beauty</li>\n      <li>2019–indiyədək — Çöhrə Estetik Klinikası</li>\n    </ul>\n  </div>\n  <div>\n    <h3 class=\"text-base font-semibold text-black/80 mb-2\">Beynəlxalq Təcrübə</h3>\n    <p>Fransa, İtaliya, İspaniya, Koreya, Türkiyə, Rusiya, İsveçrə, Monako və digər ölkələrdə ixtisasartırma kurslarında iştirak etmişəm. İmsas, Crymaldi Forum, Kolkhida, İnter Sharm sərgilərində yaxından iştirak etmişəm.</p>\n  </div>\n</div>"
+  },
+  {
+    "id": 2,
+    "name": "Afaq Haciyeva",
+    "specialty": "Kosmetoloq-konsultant",
+    "image": "/images/afaq.jpeg",
+    "experience": 12,
+    "patients": 200,
+    "rating": 4.9,
+    "shortDescription": "Uzun illər təcrübəyə malik, estetik və aparat kosmetologiyası sahəsində ixtisaslaşmış həkim-kosmetoloq. Yerli və beynəlxalq təlimlərdə iştirak edərək müasir yanaşmalarla pasiyentlərə xidmət göstərir.",
+    "description": "<div class=\"space-y-3 text-sm leading-5 font-normal text-text\">\n  <div>\n    <h2 class=\"text-base leading-6 font-semibold text-black/80 md:text-[18px]\">Afaq Haciyeva</h2>\n  <p class=\"font-medium mb-3\">Həkim-endokrinoloq</p>\n       \n    <h3 class=\" text-sm leading-5 md:text-base md:leading-6 font-semibold text-black/80 mb-1\">Haqqında</h3>\n    <p>Mən, Hacıyeva Afaq Fuad qızı, 02.05.1982-ci ildə Bakı şəhərində ziyalı ailəsində anadan olmuşam.1989-cu ildə 20 saylı orta məktəbə qəbul olub, 1999-cu ildə həmin məktəbi bitirmişəm.</p>\n  </div>\n  <div>\n    <h3 class=\"text-sm leading-5 md:text-base md:leading-6 font-semibold text-black/80 mb-1\">Təhsil və Karyera</h3>\n    <ul class=\"list-disc pl-5 space-y-1\">\n        <li>1999–2005 — Azərbaycan Dövlət Tibb Universiteti, Müalicə-profilaktika fakültəsi</li>\n <li>2005–2006 — Respublika Dəri-Zöhrəvi Dispanseri, dermato-venerologiya üzrə internatura</li>\n    </ul>\n  </div>\n  <div>\n    <h3 class=\"text-sm leading-5 md:text-base md:leading-6 font-semibold text-black/80 mb-1\">İş Təcrübəsi</h3>\n    <ul class=\"list-disc pl-5 space-y-1\">\n    <li>2007 — “Sağlamlıq Sahəsi” poliklinikası, həkim-dermatoloq</li>  <li>2013–2018 — “Epiderm” Lazer Mərkəzi, həkim-dermatoloq və kosmetoloq</li>      <li>2019–indiyədək — “Çöhrə” Estetik Klinikası, həkim-kosmetoloq</li>      <li>2021 — “Sağlamlıq Sahəsi” poliklinikasında fəaliyyətini dayandırıb</li>   \n    </ul>\n  </div>\n  <div>\n    <h3 class=\"text-base font-semibold text-black/80 mb-2\">Hazırkı Fəaliyyət</h3>\n    <p>  Hal-hazırda “Çöhrə” estetik klinikasında inyeksion və aparat kosmetologiyası sahəsində fəaliyyət göstərir.</p>\n  </div>\n</div>"
+  }
+]
