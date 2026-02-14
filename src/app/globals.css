@@ -1,26 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: rgb(191 205 180 /62%);
+  --primary: #7F9276;
+  --text-color: #666666;
+  --heading-color: rgba(0, 0, 0, 0.8);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-inter: var(--font-inter);
+  --color-primary: var(--primary);
+  --color-text: var(--text-color);
+  --color-heading: var(--heading-color);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  font-family: var(--font-inter);
+}
+
+@layer components {
+  .menu-item {
+    @apply relative leading-6 text-[16px] px-6  cursor-pointer text-inherit hover:text-primary  transition-colors duration-500 ease-in-out;
+  }
+  .mobil-menu-item {
+    @apply relative   leading-6 text-[16px]  cursor-pointer  text-black/60 hover:text-primary  transition-colors duration-500 ease-in-out;
+  }
 }
