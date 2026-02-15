@@ -1,6 +1,8 @@
 // import seo from "@/lib/seo";
 "use client";
 import Container from "@/components/shared/Container";
+import ImageList from "@/modules/galery/ImageList";
+import VideoList from "@/modules/galery/VideoList";
 import MediaList from "@/modules/media/containers/MediaList";
 import { Metadata } from "next";
 import { useState } from "react";
@@ -37,7 +39,8 @@ const Galery = () => {
         </div>
       </Container>
       <div className="pb-8 md:pb-12">
-        {/* <MediaList page={params?.page ? params?.page : 1} /> */}
+        {activeTab === 1 && <ImageList />}
+        {activeTab === 2 && <VideoList />}
       </div>
     </>
   );
