@@ -12,7 +12,7 @@ const MainSection = () => {
           <div className="min-h-[calc(85vh-12rem)] flex items-center justify-center">
             <div className="container mx-auto px-6 text-center flex flex-col items-center  text-white ">
               <h1 className="text-2xl leading-8 mb-2 font-black   md:text-[52px] md:leading-17 max-w-4xl">
-                Çöhrə Estetik Klinikası - Tibbin Mərkəzi
+                Çöhrə Estetik Klinikası
               </h1>
               <p className="font-medium text-sm leading-5 mb-6 md:text-[16px] md:leading-6 md:mb-7 max-w-159.5">
                 Yolunuzu Çöhrədən salın, çünki ən dəyərli geyiminiz dərinizdir

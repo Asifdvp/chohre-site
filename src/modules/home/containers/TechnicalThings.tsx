@@ -13,7 +13,7 @@ const TechnicalThings = () => {
       <Container>
         <div className="flex items-center justify-between mb-3 md:mb-4">
           <h2 className="text-black/80 text-[20px] leading-7 md:text-[32px] md:leading-8 font-bold">
-            Yüksək Təchizat{" "}
+            Qalereya{" "}
           </h2>
           <LinkButton text="Hamısı" href="/galery" />
         </div>
