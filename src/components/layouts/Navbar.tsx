@@ -85,9 +85,9 @@ const Navbar = () => {
               <div className="menu-item">
                 <Link href={"/galery"}>Qalereya</Link>
               </div>
-              <div className="menu-item">
+              {/* <div className="menu-item">
                 <Link href="/media">Əlaqə</Link>
-              </div>
+              </div> */}
             </div>
 
             {/* <div className="hidden md:block items-center">
@@ -171,19 +171,19 @@ const Navbar = () => {
                 Xəbərlər
               </Link>
               <Link
-                href="/about"
+                href="/galery"
                 className="mobil-menu-item"
                 onClick={() => setOpen(false)}
               >
                 Qalereya
               </Link>
-              <Link
+              {/* <Link
                 href="/about"
                 className="mobil-menu-item"
                 onClick={() => setOpen(false)}
               >
                 Əlaqə
-              </Link>
+              </Link> */}
 
               <div className=" border-b border-solid border-black/10 mt-5 mb-6 "></div>
 

@@ -99,20 +99,20 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/gallery"
+                      href="/galery"
                       className="hover:text-primary duration-300 ease-in-out"
                     >
                       Qalereya
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/contact"
                       className="hover:text-primary duration-300 ease-in-out"
                     >
                       Əlaqə
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -141,8 +141,7 @@ const Footer = () => {
                   >
                     <PointIcon />
                     <span>
-                      Kövkab Səfərəliyeva 2, Bakı, Cohre Estetik Klinikası,
-                      Baku, Azerbaijan
+                      Kövkab Səfərəliyeva 2
                     </span>
                   </a>
                 </li>

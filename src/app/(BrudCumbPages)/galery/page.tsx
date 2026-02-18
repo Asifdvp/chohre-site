@@ -3,13 +3,9 @@
 import Container from "@/components/shared/Container";
 import ImageList from "@/modules/galery/ImageList";
 import VideoList from "@/modules/galery/VideoList";
-import MediaList from "@/modules/media/containers/MediaList";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 import { useState } from "react";
 
-// export const metadata: Metadata = seo({
-//   title: "Media | Layihə Hovuzu",
-// });
 
 const Galery = () => {
   const [activeTab, setActiveTab] = useState(1);
