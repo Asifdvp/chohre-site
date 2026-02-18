@@ -8,9 +8,9 @@ type Props = {
 };
 
 const DoctorDetailContent = async ({ id }: Props) => {
-  const doctor = doctors.find((d) => d.id === +id);
-  if (!doctor) return <div>Tapılmadı</div>;
-console.log(doctor)
+  const doctorId = parseInt(id, 10);
+  if (isNaN(doctorId)) return <div>Tapılmadı</div>;
+  const doctor = doctors.find((d) => d.id === doctorId);
   return (
     <div className="pb-8 md:pb-12 ">
       <div className=" flex flex-col-reverse md:flex-row gap-4 md:gap-6">

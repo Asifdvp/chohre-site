@@ -11,17 +11,18 @@ const DoctorCard: React.FC<{ doctor: IDoctorData; layer: boolean }> = ({
 }) => {
   return (
     <Link href={`/doctors/${doctor.id}`}>
-      <div className="relative group w-full h-72  md:h-80 rounded-md overflow-hidden cursor-pointe bg-white/8">
+      <div className="relative group w-full h-72  md:h-80 rounded-md overflow-hidden cursor-pointe bg-white">
         {/* Doctor Image */}
-        <div className="w-full aspect-3/4 relative overflow-hidden rounded-lg">
-          <Image
-            src={doctor.image}
-            alt={doctor.name}
-            fill
-            className="object-cover"
-          />
-          {/* Name Tag */}
-          <div className="absolute bottom-0 left-0 w-full bg-black/48 text-white p-3 z-10 md:px-4">
+
+           <div className="relative w-50 h-50 md:w-60 md:h-60 m-auto rounded-full overflow-hidden border-4 border-white shadow-lg mb-5 shrink-0 bg-white">
+            <Image
+              src={doctor.image}
+              alt={doctor.name}
+              fill
+              className="object-cover"
+            />
+          </div>
+            <div className="absolute bottom-0 left-0 w-full bg-black/48 text-white p-3 z-10 md:px-4">
             <h3 className="text-sm font-semibold leading-5 md:text-base">
               {doctor.name}
             </h3>
@@ -29,7 +30,7 @@ const DoctorCard: React.FC<{ doctor: IDoctorData; layer: boolean }> = ({
               {doctor.specialty}
             </p>
           </div>
-        </div>
+        
 
         {/* Hover Layer */}
 

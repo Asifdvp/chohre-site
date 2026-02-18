@@ -68,6 +68,9 @@ const Navbar = () => {
               className={`hidden md:flex items-center  ${isHome ? "text-white" : "text-black/80"}`}
             >
               <div className="menu-item">
+                <Link href="/about">Ana Səhifə</Link>
+              </div>
+              <div className="menu-item">
                 <Link href="/about">Haqqımızda</Link>
               </div>
               <div className="menu-item">
@@ -87,7 +90,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="hidden md:block items-center">
+            {/* <div className="hidden md:block items-center">
               <button
                 onClick={handleScrollToTop}
                 className={` backdrop-blur-xl  text-white ${isHome ? "bg-transparent " : " bg-primary "}   cursor-pointer   px-4 py-1.5 font-500 rounded-[48px] flex items-center gap-3 transition-colors duration-300 ease-in-out`}
@@ -102,7 +105,7 @@ const Navbar = () => {
                   <RightArrow />
                 </div>
               </button>
-            </div>
+            </div> */}
 
             <div className=" my-auto block md:hidden  ">
               <button
@@ -132,6 +135,13 @@ const Navbar = () => {
         {open && (
           <div className="absolute top-full left-0 w-full bg-primary z-50 h-screen p-5">
             <Container className="w-full flex flex-col gap-2">
+              <Link
+                href="/"
+                className="mobil-menu-item"
+                onClick={() => setOpen(false)}
+              >
+                Ana Səhifə
+              </Link>
               <Link
                 href="/about"
                 className="mobil-menu-item"
@@ -177,7 +187,7 @@ const Navbar = () => {
 
               <div className=" border-b border-solid border-black/10 mt-5 mb-6 "></div>
 
-              <div className="flex">
+              {/* <div className="flex">
                 {" "}
                 <button
                   onClick={handleScrollToTop}
@@ -193,7 +203,7 @@ const Navbar = () => {
                     <RightArrow />
                   </div>
                 </button>
-              </div>
+              </div> */}
             </Container>
           </div>
         )}

@@ -3,7 +3,7 @@ import DepartmentSection from "@/modules/home/containers/DepartmentSection";
 import DoctorSection from "@/modules/home/containers/DoctorsSection";
 import MainSection from "@/modules/home/containers/MainSection";
 import NewsSection from "@/modules/home/containers/NewsSection";
-import StepSection from "@/modules/home/containers/StepSection";
+// import StepSection from "@/modules/home/containers/StepSection";
 import TechnicalThings from "@/modules/home/containers/TechnicalThings";
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
       <CountSection />
       <DepartmentSection />
       <DoctorSection />
-      <StepSection />
+      {/* <StepSection /> */}
       <NewsSection />
       <TechnicalThings/>
     </>

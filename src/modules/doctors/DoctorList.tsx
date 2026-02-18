@@ -12,7 +12,7 @@ const DoctorList = async ({ page = 1 }: MediasPageProps) => {
   // const medias = await getMedias({ pageCount: 9, pageIndex: page });
   return (
     <Container>
-      <div className=" grid grid-rows-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+      <div className=" grid grid-rows-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-4 md:gap-6">
         {doctors?.length
           ? doctors.map((card, index) => (
               <DoctorCard
