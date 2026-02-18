@@ -13,7 +13,7 @@ const ServiceDetail = () => {
         <div className="grid  grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {/* <div className="md:col-span-1 relative">
         <Image
-    src="/images/mainSection.jpg"
+    src="/images/mainSection.webp"
     alt="about"
     width={500}
     height={400}
@@ -22,7 +22,7 @@ const ServiceDetail = () => {
     </div> */}
           <div className="col-span-1 relative aspect-4/3 md:aspect-auto md:min-h-[calc(100vh-25rem)]">
             <Image
-              src="/images/mainSection.jpg"
+              src="/images/mainSection.webp"
               alt="about"
               fill
               className="object-cover rounded-lg"

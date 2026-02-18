@@ -4,11 +4,11 @@ import Container from "@/components/shared/Container";
 import DoctorCard from "../home/components/DoctorCard";
 import doctors from "@/data/doctors.json";
 
-interface MediasPageProps {
-  page: number;
-}
+// interface MediasPageProps {
+//   page: number;
+// }
 
-const DoctorList = async ({ page = 1 }: MediasPageProps) => {
+const DoctorList = async () => {
   // const medias = await getMedias({ pageCount: 9, pageIndex: page });
   return (
     <Container>

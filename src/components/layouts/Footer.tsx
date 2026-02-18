@@ -31,7 +31,7 @@ const Footer = () => {
               <div className="flex mt-3 nd:mt-6 gap-2">
                 <div className="w-6 h-6 rounded-[50%] bg-primary flex justify-center items-center">
                   <a
-                    href="https://youtube.com"
+                    href="https://www.youtube.com/channel/UC1-IViTGbYfEWolkdmuweDg"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

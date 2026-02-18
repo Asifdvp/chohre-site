@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,23 +12,22 @@ const DoctorCard: React.FC<{ doctor: IDoctorData; layer: boolean }> = ({
       <div className="relative group w-full h-62  md:h-80 rounded-md overflow-hidden cursor-pointe bg-white">
         {/* Doctor Image */}
 
-           <div className="relative w-40 h-40 md:w-60 md:h-60 m-auto rounded-full overflow-hidden border-4 border-white shadow-lg mb-5 shrink-0 bg-white">
-            <Image
-              src={doctor.image}
-              alt={doctor.name}
-              fill
-              className="object-cover"
-            />
-          </div>
-            <div className="absolute bottom-0 left-0 w-full bg-black/48 text-white p-3 z-10 md:px-4">
-            <h3 className="text-sm font-semibold leading-5 md:text-base">
-              {doctor.name}
-            </h3>
-            <p className="text-sm leading-5 font-normal md:font-medium">
-              {doctor.specialty}
-            </p>
-          </div>
-        
+        <div className="relative w-40 h-40 md:w-60 md:h-60 m-auto rounded-full overflow-hidden border-4 border-white shadow-lg mb-5 shrink-0 bg-white">
+          <Image
+            src={doctor.image}
+            alt={doctor.name}
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="absolute bottom-0 left-0 w-full bg-black/48 text-white p-3 z-10 md:px-4">
+          <h3 className="text-sm font-semibold leading-5 md:text-base">
+            {doctor.name}
+          </h3>
+          <p className="text-sm leading-5 font-normal md:font-medium">
+            {doctor.specialty}
+          </p>
+        </div>
 
         {/* Hover Layer */}
 

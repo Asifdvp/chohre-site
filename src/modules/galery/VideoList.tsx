@@ -1,15 +1,21 @@
 "use client";
 import Container from "@/components/shared/Container";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import CloseIcon from "@/assets/icons/close.svg";
 import PlayIcon from "@/assets/icons/playButton.svg";
 import Image from "next/image";
+import { useScrollLock } from "@/hooks/useScrollLock";
+import { videos } from "./constants";
 
 // YouTube URL-dən video ID-ni çıxar
 function getYoutubeId(url: string): string {
-  if (url.includes("watch?v=")) return url.split("watch?v=")[1].split("&")[0];
-  if (url.includes("/embed/")) return url.split("/embed/")[1].split("?")[0];
-  return "";
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname === "youtu.be") return parsed.pathname.slice(1);
+    return parsed.searchParams.get("v") ?? "";
+  } catch {
+    return "";
+  }
 }
 
 // Embed URL-ə çevir
@@ -21,22 +27,7 @@ function toEmbedUrl(url: string): string {
 const VideoList = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
-  // Scroll bağla
-  useEffect(() => {
-    document.body.style.overflow = selectedVideo ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [selectedVideo]);
-
-  const videos = {
-    items: [
-      { id: 1, url: "https://www.youtube.com/watch?v=ZgufgwnDYvc" },
-      { id: 2, url: "https://www.youtube.com/watch?v=DRHObyB8P0w" },
-      { id: 3, url: "https://www.youtube.com/watch?v=ZdetHaK2u3s" },
-      { id: 4, url: "https://www.youtube.com/watch?v=XLdJ7QORfL4&pp=0gcJCYcKAYcqIYzv" },
-      { id: 5, url: "https://www.youtube.com/watch?v=6-OxofOW_lg" },
-      { id: 6, url: "https://www.youtube.com/watch?v=6KW2SpUJX1A" },
-    ],
-  };
+  useScrollLock(!!selectedVideo);
 
   return (
     <Container>
@@ -51,7 +42,7 @@ const VideoList = () => {
             >
               <Image
                 src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
-                alt={`video-${video.id}`}
+                alt="Tədbir videosu"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-200"
                 unoptimized

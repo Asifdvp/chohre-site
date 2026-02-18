@@ -14,7 +14,7 @@ const Services = async ({
 }: {
   searchParams: Promise<{ page?: number }>;
 }) => {
- // const params = await searchParams;
+  // const params = await searchParams;
 
   return (
     <div className="pb-8 md:pb-12">
@@ -59,22 +59,22 @@ const partners = [
   {
     id: 1,
     name: "Üz və bədən estetikası",
-    img: <Radiologiya />, 
-    text: "Dəri problemlərinin müalicəsi (akne, pigmentasiya, çapıq və s.)",
+    img: <Radiologiya />,
+    text: "Üz və bədən estetikası",
     link: "/services/1",
   },
   {
     id: 2,
     name: "Dəri problemlərinin müalicəsi",
     img: <Urolog />,
-    text: "İnyeksiyon prosedurlar (botoks, dolğu və s.)",
+    text: "Akne, pigmentasiya, çapıq və s.",
     link: "/services/2",
   },
   {
     id: 3,
     name: "İnyeksiyon prosedurlar",
     img: <FirstHelp />,
-    text: "İnyeksiyon prosedurlar",
+    text: "Botoks, dolğu və s.",
     link: "/services/3",
   },
   {

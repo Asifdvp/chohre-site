@@ -38,7 +38,7 @@ const DoctorSection = async () => {
         >
           <CarouselContent>
             {doctors?.length &&
-              doctors.map((doctor) => (
+              doctors.slice(0, 4).map((doctor) => (
                 <CarouselItem
                   className="  md:basis-1/2 lg:basis-1/3  basis-1/1 sm:basis-1/2 xl:basis-1/4"
                   key={doctor.id}

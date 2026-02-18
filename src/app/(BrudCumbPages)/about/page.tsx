@@ -1,8 +1,5 @@
 // import seo from "@/lib/seo";
 import Container from "@/components/shared/Container";
-import DoctorList from "@/modules/doctors/DoctorList";
-import MediaList from "@/modules/media/containers/MediaList";
-import { Metadata } from "next";
 import Image from "next/image";
 
 // export const metadata: Metadata = seo({
@@ -14,23 +11,14 @@ const About = () => {
     <Container>
       <div className="pb-8 md:pb-12">
         <div className="grid  grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          {/* <div className="md:col-span-1 relative">
-        <Image
-    src="/images/mainSection.jpg"
-    alt="about"
-    width={500}
-    height={400}
-    className="w-full h-auto object-contain"
-  />
-    </div> */}
-<div className="col-span-1 relative aspect-[4/3] md:aspect-auto md:h-full">
-  <Image
-    src="/images/mainSection.jpg"
-    alt="about"
-    fill
-    className="object-cover rounded-lg"
-  />
-</div>
+          <div className="col-span-1 relative aspect-4/3 md:aspect-auto md:h-full">
+            <Image
+              src="/images/about.webp"
+              alt="about"
+              fill
+              className="object-cover rounded-lg"
+            />
+          </div>
 
           <div className="md:col-span-2 rounded-lg px-4 border border-primary/12 p-3 md:px-5 text-text font-sm font-normal leading-5">
             <div>
@@ -72,11 +60,8 @@ const About = () => {
               </h3>
               <ul>
                 <li>• Üz və bədən estetikası</li>
-                <li>
-                  • Dəri problemlərinin müalicəsi (akne, pigmentasiya, çapıq və
-                  s.)
-                </li>
-                <li>• İnyeksiyon prosedurlar (botoks, dolğu və s.)</li>
+                <li>• Dəri problemlərinin müalicəsi </li>
+                <li>• İnyeksiyon prosedurlar </li>
                 <li>• Aparat kosmetologiyası</li>
               </ul>
             </div>

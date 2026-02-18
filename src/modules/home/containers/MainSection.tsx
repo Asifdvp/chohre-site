@@ -5,7 +5,7 @@ const MainSection = () => {
   return (
     <div
       className="min-h-[calc(85vh-12rem)] bg-cover bg-center "
-      style={{ backgroundImage: "url('/images/mainSection.jpg')" }}
+      style={{ backgroundImage: "url('/images/mainSection.webp')" }}
     >
       <div className="bg-black/20">
         <Container>

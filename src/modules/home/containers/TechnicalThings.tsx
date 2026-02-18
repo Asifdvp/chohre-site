@@ -22,7 +22,7 @@ const TechnicalThings = () => {
           {/* Big image */}
           <div className="col-span-12 w-full relative md:col-span-8 h-65 rounded-md ">
             <Image
-              src="/images/tech1.jpg"
+              src="/images/tech1.webp"
               alt=""
               fill
               className="object-cover object-bottom rounded-md"
@@ -51,7 +51,7 @@ const TechnicalThings = () => {
 
           <div className="col-span-12 md:col-span-8 h-55  w-full relative rounded-md ">
             <Image
-              src="/images/tech1.jpg"
+              src="/images/tech1.webp"
               alt=""
               fill
               className="object-cover object-bottom rounded-md"
@@ -83,7 +83,7 @@ const TechnicalThings = () => {
                     <div className="rounded-md border border-primary/12  overflow-hidden">
                       <div className="relative w-full h-63">
                         <Image
-                          src={"/images/tech1.jpg"}
+                          src={"/images/tech1.webp"}
                           fill
                           className="object-cover"
                           alt="sdfsdf"

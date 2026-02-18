@@ -1,6 +1,5 @@
 import Container from "@/components/shared/Container";
 import DoctorDetailContent from "@/modules/doctorDetail/containers/DoctorDetailContent";
-import DetailContent from "@/modules/mediaDetail/containers/DetailContent";
 // import seo from "@/lib/seo";
 // import DetailContent from "@/modules/mediaDetail/containers/DetailContent";
 // import OtherNews from "@/modules/mediaDetail/containers/OtherNews";
@@ -27,8 +26,6 @@ const NewsDetail = async ({ params }: Props) => {
   return (
     <Container>
       <DoctorDetailContent id={id} />
-      {/* <DetailContent code={id} />
-      <OtherNews code={id} /> */}
     </Container>
   );
 };
