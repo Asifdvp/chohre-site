@@ -40,7 +40,7 @@ const DoctorSection = async () => {
             {doctors?.length &&
               doctors.map((doctor) => (
                 <CarouselItem
-                  className="lg:basis-1/4 md:basis-1/2 basis-1/2 sm:basis-1/2 "
+                  className="  md:basis-1/2 lg:basis-1/3  basis-1/1 sm:basis-1/2 xl:basis-1/4"
                   key={doctor.id}
                 >
                   <DoctorCard key={doctor.id} doctor={doctor as unknown as IDoctorData} layer={true} />

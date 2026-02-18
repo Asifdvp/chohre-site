@@ -124,18 +124,27 @@ const Footer = () => {
               <ul className="space-y-2 text-sm leading-5 text-black/60 flex flex-col items-start ">
                 <li className="flex items-center gap-2">
                   <PhoneIcon />
-                  <span>077 777 77 77</span>
+                  <span>070 708 61 61</span>
                 </li>
 
                 <li className="flex items-center gap-2">
                   <MailIcon />
-                  <span>zahidklinika@gmail.com</span>
+                  <span>chohreestetic@gmail.com</span>
                 </li>
 
-                <li className="flex items-center gap-2">
-                  <PointIcon />
-
-                  <span>Hacı Cəfərli küçəsi 57</span>
+                <li className="flex items-center gap-2 cursor-pointer">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Kövkab+Səfərəliyeva+2,+Bakı,+Cohre+Estetik+Klinikası"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 hover:text-primary transition-colors"
+                  >
+                    <PointIcon />
+                    <span>
+                      Kövkab Səfərəliyeva 2, Bakı, Cohre Estetik Klinikası,
+                      Baku, Azerbaijan
+                    </span>
+                  </a>
                 </li>
 
                 <li className="flex items-center gap-2">
@@ -154,7 +163,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-black/10  py-4 md:py-5 text-text font-normal text-[14px] leading-5">
-          © Copyright 2022 FloBuy. All rights are reserved
+          © Copyright 2026. All rights are reserved
         </div>
       </Container>
     </footer>

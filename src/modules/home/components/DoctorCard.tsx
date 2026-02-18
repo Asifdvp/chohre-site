@@ -11,10 +11,10 @@ const DoctorCard: React.FC<{ doctor: IDoctorData; layer: boolean }> = ({
 }) => {
   return (
     <Link href={`/doctors/${doctor.id}`}>
-      <div className="relative group w-full h-72  md:h-80 rounded-md overflow-hidden cursor-pointe bg-white">
+      <div className="relative group w-full h-62  md:h-80 rounded-md overflow-hidden cursor-pointe bg-white">
         {/* Doctor Image */}
 
-           <div className="relative w-50 h-50 md:w-60 md:h-60 m-auto rounded-full overflow-hidden border-4 border-white shadow-lg mb-5 shrink-0 bg-white">
+           <div className="relative w-40 h-40 md:w-60 md:h-60 m-auto rounded-full overflow-hidden border-4 border-white shadow-lg mb-5 shrink-0 bg-white">
             <Image
               src={doctor.image}
               alt={doctor.name}
