@@ -68,7 +68,7 @@ const Navbar = () => {
               className={`hidden md:flex items-center  ${isHome ? "text-white" : "text-black/80"}`}
             >
               <div className="menu-item">
-                <Link href="/about">Ana Səhifə</Link>
+                <Link href="/">Ana Səhifə</Link>
               </div>
               <div className="menu-item">
                 <Link href="/about">Haqqımızda</Link>
@@ -86,7 +86,7 @@ const Navbar = () => {
                 <Link href={"/galery"}>Qalereya</Link>
               </div>
               {/* <div className="menu-item">
-                <Link href="/media">Əlaqə</Link>
+                <Link href="/contact">Əlaqə</Link>
               </div> */}
             </div>
 
@@ -178,7 +178,7 @@ const Navbar = () => {
                 Qalereya
               </Link>
               {/* <Link
-                href="/about"
+                href="/contact"
                 className="mobil-menu-item"
                 onClick={() => setOpen(false)}
               >

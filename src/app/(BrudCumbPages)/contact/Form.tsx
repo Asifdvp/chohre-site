@@ -33,6 +33,7 @@ const ContactForm = () => {
           <input
             type="text"
             name="name"
+            disabled
             value={form.name}
             onChange={handleChange}
             className="w-full px-4 py-2.5  rounded-lg bg-background focus:outline-none "
@@ -46,6 +47,7 @@ const ContactForm = () => {
           <input
             type="text"
             name="phone"
+            disabled
             value={form.phone}
             onChange={handleChange}
             className="w-full px-4 py-2.5  rounded-lg bg-background focus:outline-none "
@@ -59,6 +61,7 @@ const ContactForm = () => {
         <input
           type="email"
           name="email"
+          disabled
           value={form.email}
           onChange={handleChange}
           className="w-full px-4 py-2.5   rounded-lg bg-background focus:outline-none "
@@ -70,6 +73,7 @@ const ContactForm = () => {
         <label className="block text-sm font-medium mb-1">Mesajınız</label>
         <textarea
           name="message"
+          disabled
           value={form.message}
           onChange={handleChange}
           className="w-full px-4 py-2.5  h-27  rounded-lg bg-background focus:outline-none "
@@ -79,7 +83,8 @@ const ContactForm = () => {
 
       <div className="flex justify-end mt-7">
         <button
-          className={` backdrop-blur-xl  text-white  bg-primary    cursor-pointer   px-4 py-1.5 font-500 rounded-[48px] flex items-center gap-3 transition-colors duration-300 ease-in-out`}
+          disabled
+          className={` backdrop-blur-xl  text-white  bg-primary       px-4 py-1.5 font-500 rounded-[48px] flex items-center gap-3 transition-colors duration-300 ease-in-out`}
         >
           <span>Göndər </span>
           <div

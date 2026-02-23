@@ -19,4 +19,12 @@ export const videos = {
     { src: "/images/galery/image3.webp" },
     { src: "/images/galery/image4.webp" },
     { src: "/images/galery/image5.webp" },
+    { src: "/images/galery/image6.webp" },
+    { src: "/images/galery/image7.webp" },
+    { src: "/images/galery/image8.webp" },
+    { src: "/images/galery/image9.webp" },
+    { src: "/images/galery/image10.webp" },
+    { src: "/images/galery/image11.webp" },
+    { src: "/images/galery/image12.webp" },
+    { src: "/images/galery/image13.webp" },
   ];

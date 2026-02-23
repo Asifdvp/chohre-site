@@ -17,7 +17,7 @@ const GaleryTabs = () => {
         </h1>{" "}
         <div className="flex gap-2 items-center">
           <GaleryTab
-            label="Səkillər"
+            label="Şəkillər"
             active={activeTab === 1}
             onClick={() => setActiveTab(1)}
           />

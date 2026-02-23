@@ -26,7 +26,7 @@ const ImageList = () => {
         {medias.map((card, i) => (
           <div
             key={card.src}
-            className="cursor-pointer overflow-hidden rounded-lg"
+            className="cursor-pointer overflow-hidden rounded-lg max-h-100"
             onClick={() => {
               setIndex(i);
               setOpen(true);
