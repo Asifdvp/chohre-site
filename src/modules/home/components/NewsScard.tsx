@@ -2,24 +2,24 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const NewsScard = () => {
+const NewsScard = ({card}) => {
   return (
-      <Link href={`/media/${5}`}>
-    <div className="rounded-md border border-primary/12  overflow-hidden bg-white">
+      <Link href={`/media/${card.id}`}>
+    <div className="rounded-md border border-primary/12  overflow-hidden bg-white h-full">
       <div className="relative w-full h-63">
         <Image
-          src={"/images/test.jpg"}
+          src={card.images[0].imageUrl}
           fill
           className="object-cover"
-          alt="sdfsdf"
+          alt={card.title}
         />
       </div>
       <div className="p-3">
         <div className="font-medium text-[12px] leading-4  text-black/60 mb-1">
-          5 fevral, 2026
+          {card.date}
         </div>
-        <div className="text-black/80font-semibold text-sm leading-5">
-          COVID Linked to Long-Term Risk of Digestive Diseases: Study
+        <div className="text-black/80 font-semibold text-sm leading-5">
+          {card.title}
         </div>
       </div>
     </div>

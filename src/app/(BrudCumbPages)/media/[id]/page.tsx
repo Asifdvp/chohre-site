@@ -22,10 +22,9 @@ type Props = {
 
 const NewsDetail = async ({ params }: Props) => {
   const { id } = await params;
-console.log(id)
   return (
     <Container>
-      <DetailContent code={id}/>
+      <DetailContent id={id} />
       {/* <DetailContent code={id} />
       <OtherNews code={id} /> */}
     </Container>
