@@ -5,11 +5,10 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import React from "react";
-import StepCard from "../components/StepCard";
-import Link from "next/link";
-import ArrowIcon from "@/assets/icons/right-arrow.svg";
+// import ArrowIcon from "@/assets/icons/right-arrow.svg";
 import NewsScard from "../components/NewsScard";
 import LinkButton from "@/components/shared/LinkButton";
+import news  from "@/data/news.json";
 
 const NewsSection = () => {
   return (
@@ -33,14 +32,14 @@ const NewsSection = () => {
           className="w-full max-w-[83vw]"
         >
           <CarouselContent>
-            {steps?.length &&
-              steps.map((step) => (
+            {news?.length &&
+              news.slice(0, 3).map((card) => (
                 <CarouselItem
                   className="lg:basis-1/3 md:basis-1/3 basis-1/1 xs:basis-1/2"
-                  key={step.id}
+                  key={card.id}
                   //  className="shrink-0  max-w-80 md:"
                 >
-                  <NewsScard />
+                  <NewsScard card={card} />
                 </CarouselItem>
               ))}
           </CarouselContent>

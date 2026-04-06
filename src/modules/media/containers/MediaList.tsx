@@ -5,6 +5,7 @@ import Link from "next/link";
 import NextIcon from "@/assets/icons/down-arrow.svg";
 import PrevIcon from "@/assets/icons/up-arrow.svg";
 import NewsScard from "@/modules/home/components/NewsScard";
+import news from "@/data/news.json";
 
 interface MediasPageProps {
   page: number;
@@ -12,22 +13,24 @@ interface MediasPageProps {
 
 const MediaList = async ({ page = 1 }: MediasPageProps) => {
   // const medias = await getMedias({ pageCount: 9, pageIndex: page });
+
   return (
     <Container>
-        <div className=" grid grid-rows-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {medias?.items?.length
-            ? medias.items?.map((card,index) => (
-                <NewsScard
-                  key={index}
-                  // title={card.title}
-                  // description={card.description}
-                  // href={card.code}
-                  // imageUrl={card.imageUrl}
-                />
-              ))
-            : ""}
-        </div>
-        {/* <div className="flex justify-end mt-5  bg-red-500 h-40 w-40">
+      <div className=" grid grid-rows-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        {news?.length
+          ? news.map((card, index) => (
+              <NewsScard
+                key={index}
+                card={card}
+                // title={card.title}
+                // description={card.description}
+                // href={card.code}
+                // imageUrl={card.imageUrl}
+              />
+            ))
+          : ""}
+      </div>
+      {/* <div className="flex justify-end mt-5  bg-red-500 h-40 w-40">
           <div className="flex gap-[10px]">
             <Button variant={"outline"} disabled={page == 1} size={"xs"}>
               <Link href={`/media?page=${+page - 1}`}>
@@ -250,5 +253,5 @@ const medias = {
       code: "#",
     },
   ],
-  haveNext:false
+  haveNext: false,
 };
