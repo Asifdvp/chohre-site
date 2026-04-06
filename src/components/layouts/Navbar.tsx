@@ -29,12 +29,13 @@ const Navbar = () => {
           : "sticky top-0 bg-background backdrop-blur-sm "
       }`}
     >
-      <div className="relative py-3.75">
+      
+      <div className="relative py-0 h-18 flex items-center">
         <Container>
           <div className="flex  mx-auto  justify-between items-center ">
             <div className="flex items-center">
               <Link href={"/"}>
-                <div className="hidden md:block w-60 h-10 ">
+                <div className="hidden md:block w-60 h-13 ">
                   <Image
                     src={
                       isHome
@@ -48,7 +49,7 @@ const Navbar = () => {
                     priority
                   />
                 </div>
-                <div className="items-center flex md:hidden  w-35 h-6 ">
+                <div className="items-center flex md:hidden  w-18 h-10 ">
                   <Image
                     src={
                       isHome
