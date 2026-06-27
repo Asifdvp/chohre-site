@@ -5,7 +5,6 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import React from "react";
-// import ArrowIcon from "@/assets/icons/right-arrow.svg";
 import NewsScard from "../components/NewsScard";
 import LinkButton from "@/components/shared/LinkButton";
 import news  from "@/data/news.json";
@@ -50,27 +49,3 @@ const NewsSection = () => {
 };
 
 export default NewsSection;
-
-const steps = [
-  {
-    id: 1,
-    step: 1,
-    title: "Həkimi seçin",
-    description:
-      "Once the blood is collected, the phlebotomist will remove the needle and apply a bandage.",
-  },
-  {
-    id: 2,
-    step: 2,
-    title: "Tarixi seçin",
-    description:
-      "Once the blood is collected, the phlebotomist will remove the needle and apply a bandage.",
-  },
-  {
-    id: 3,
-    step: 3,
-    title: "Təsdiqləyin",
-    description:
-      "Once the blood is collected, the phlebotomist will remove the needle and apply a bandage.",
-  },
-];

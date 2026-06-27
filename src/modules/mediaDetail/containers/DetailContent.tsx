@@ -40,17 +40,3 @@ const DetailContent = async ({ id }: Props) => {
 };
 
 export default DetailContent;
-
-const media = {
-  id: 1,
-  title:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, repellat.",
-  description: "<p className='font-sm leading-5 text-text font-regular'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, repellat.  </p>",
-  images: [
-    { id: 1, isMain: true, imageUrl: "/images/tech1.webp" },
-    { id: 2, isMain: false, imageUrl: "/images/tech1.webp" },
-    { id: 3, isMain: false, imageUrl: "/images/tech1.webp" },
-    { id: 4, isMain: false, imageUrl: "/images/tech1.webp" },
-    { id: 5, isMain: false, imageUrl: "/images/tech1.webp" },
-  ],
-};

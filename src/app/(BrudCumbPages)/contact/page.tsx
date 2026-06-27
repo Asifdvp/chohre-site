@@ -1,9 +1,5 @@
 // import seo from "@/lib/seo";
 import Container from "@/components/shared/Container";
-import DoctorList from "@/modules/doctors/DoctorList";
-import MediaList from "@/modules/media/containers/MediaList";
-import { Metadata } from "next";
-import Image from "next/image";
 import GoogleMapComponent from "./Map";
 import ContactForm from "./Form";
 
