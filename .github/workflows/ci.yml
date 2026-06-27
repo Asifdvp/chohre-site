@@ -13,6 +13,6 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm install
+      - run: rm -f package-lock.json && npm install
       - run: npm run lint
       - run: npm run build
