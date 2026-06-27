@@ -9,12 +9,7 @@ import FirstHelp from "@/assets/icons/departments/firstHelp.svg";
 //   title: "Media | Layihə Hovuzu",
 // });
 
-const Services = async ({
-  searchParams,
-}: {
-  searchParams: Promise<{ page?: number }>;
-}) => {
-  // const params = await searchParams;
+const Services = async () => {
 
   return (
     <div className="pb-8 md:pb-12">

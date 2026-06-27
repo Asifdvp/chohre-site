@@ -3,16 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import Container from "../shared/Container";
-import RightArrow from "@/assets/icons/right-arrow.svg";
 import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const [open, setOpen] = React.useState(false);
-
-  const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
