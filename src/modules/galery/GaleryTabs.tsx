@@ -15,7 +15,11 @@ const GaleryTabs = () => {
         <h1 className="text-[20px] text-black/80  leading-7 font-bold md:text-[32px] md:leading-10 mb-3 md:mb-4">
           Qalereya
         </h1>{" "}
-        <div className="flex gap-2 items-center">
+        <div
+          role="tablist"
+          aria-label="Qalereya növü"
+          className="flex gap-2 items-center"
+        >
           <GaleryTab
             label="Şəkillər"
             active={activeTab === 1}

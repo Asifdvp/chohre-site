@@ -4,6 +4,16 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import Container from "../shared/Container";
 import { usePathname } from "next/navigation";
+
+const navLinks = [
+  { href: "/", label: "Ana Səhifə" },
+  { href: "/about", label: "Haqqımızda" },
+  { href: "/services", label: "Xidmətlər" },
+  { href: "/doctors", label: "Həkimlər" },
+  { href: "/media", label: "Xəbərlər" },
+  { href: "/galery", label: "Qalereya" },
+];
+
 const Navbar = () => {
   const pathname = usePathname();
   const isHome = pathname === "/";
@@ -11,114 +21,89 @@ const Navbar = () => {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
-
     return () => {
       document.body.style.overflow = "auto";
     };
   }, [open]);
+
   return (
     <nav
-      className={` z-50 w-full   ${
+      aria-label="Əsas naviqasiya"
+      className={`z-50 w-full ${
         isHome
-          ? "absolute top-0 bg-black/20 border  border-solid border-black/16"
-          : "sticky top-0 bg-background backdrop-blur-sm "
+          ? "absolute top-0 bg-black/20 border border-solid border-black/16"
+          : "sticky top-0 bg-background backdrop-blur-sm"
       }`}
     >
-      
       <div className="relative py-0 h-18 flex items-center">
         <Container>
-          <div className="flex  mx-auto  justify-between items-center ">
-            <div className="flex items-center">
-              <Link href={"/"}>
-                <div className="hidden md:block w-60 h-13 ">
-                  <Image
-                    src={
-                      isHome
-                        ? "/images/logo-white.png"
-                        : "/images/logo-black.png"
-                    }
-                    width={240}
-                    height={40}
-                    alt="clinic-logo"
-                    className="w-full h-full object-contain"
-                    priority
-                  />
-                </div>
-                <div className="items-center flex md:hidden  w-18 h-10 ">
-                  <Image
-                    src={
-                      isHome
-                        ? "/images/logo-white.png"
-                        : "/images/logo-black.png"
-                    }
-                    width={140}
-                    height={24}
-                    alt="clinic-logo"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </Link>
-            </div>
+          <div className="flex mx-auto justify-between items-center">
+            {/* Logo */}
+            <Link href="/" aria-label="Çöhrə Estetik Klinikası — Ana Səhifə">
+              <div className="hidden md:block w-60 h-13">
+                <Image
+                  src={isHome ? "/images/logo-white.png" : "/images/logo-black.png"}
+                  width={240}
+                  height={40}
+                  alt="Çöhrə Estetik Klinikası loqosu"
+                  className="w-full h-full object-contain"
+                  priority
+                />
+              </div>
+              <div className="items-center flex md:hidden w-18 h-10">
+                <Image
+                  src={isHome ? "/images/logo-white.png" : "/images/logo-black.png"}
+                  width={140}
+                  height={24}
+                  alt="Çöhrə Estetik Klinikası loqosu"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </Link>
 
-            <div
-              className={`hidden md:flex items-center  ${isHome ? "text-white" : "text-black/80"}`}
+            {/* Desktop navigation */}
+            <ul
+              role="list"
+              className={`hidden md:flex items-center gap-0 list-none m-0 p-0 ${
+                isHome ? "text-white" : "text-black/80"
+              }`}
             >
-              <div className="menu-item">
-                <Link href="/">Ana Səhifə</Link>
-              </div>
-              <div className="menu-item">
-                <Link href="/about">Haqqımızda</Link>
-              </div>
-              <div className="menu-item">
-                <Link href={"/services"}>Xidmətlər</Link>
-              </div>
-              <div className="menu-item">
-                <Link href={"/doctors"}>Həkimlər</Link>
-              </div>
-              <div className="menu-item">
-                <Link href={"/media"}>Xəbərlər</Link>
-              </div>
-              <div className="menu-item">
-                <Link href={"/galery"}>Qalereya</Link>
-              </div>
-              {/* <div className="menu-item">
-                <Link href="/contact">Əlaqə</Link>
-              </div> */}
-            </div>
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="menu-item"
+                    aria-current={pathname === link.href ? "page" : undefined}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
-            {/* <div className="hidden md:block items-center">
-              <button
-                onClick={handleScrollToTop}
-                className={` backdrop-blur-xl  text-white ${isHome ? "bg-transparent " : " bg-primary "}   cursor-pointer   px-4 py-1.5 font-500 rounded-[48px] flex items-center gap-3 transition-colors duration-300 ease-in-out`}
-              >
-                <span>Randevu Al</span>
-                <div
-                  className={` ${isHome ? " bg-[linear-gradient(91.42deg,#7F9276_15.2%,#BFCDB4_153.04%)]" : "bg-white text-primary"}
-  
-    w-9 h-9 rounded-full flex items-center justify-center
-    ${isHome ? " text-white" : "bg-white text-primary"}`}
-                >
-                  <RightArrow />
-                </div>
-              </button>
-            </div> */}
-
-            <div className=" my-auto block md:hidden  ">
+            {/* Mobile hamburger button */}
+            <div className="my-auto block md:hidden">
               <button
                 onClick={() => setOpen(!open)}
+                aria-label={open ? "Menyunu bağla" : "Menyunu aç"}
+                aria-expanded={open}
+                aria-controls="mobile-menu"
                 className="flex flex-col justify-center items-center gap-1.5 cursor-pointer"
               >
                 <span
+                  aria-hidden="true"
                   className={`w-5.5 h-0.5 bg-black/60 rounded transition-all duration-500 ease-in-out ${
                     open ? "rotate-45 translate-y-2" : ""
                   }`}
                 />
                 <span
-                  className={`w-5.5 h-0.5 bg-black/60 rounded transition-all  ${
+                  aria-hidden="true"
+                  className={`w-5.5 h-0.5 bg-black/60 rounded transition-all ${
                     open ? "opacity-0" : ""
                   }`}
                 />
                 <span
+                  aria-hidden="true"
                   className={`w-5.5 h-0.5 bg-black/60 rounded transition-all duration-500 ease-in-out ${
                     open ? "-rotate-45 -translate-y-2" : ""
                   }`}
@@ -128,78 +113,32 @@ const Navbar = () => {
           </div>
         </Container>
 
+        {/* Mobile menu */}
         {open && (
-          <div className="absolute top-full left-0 w-full bg-primary z-50 h-screen p-5">
+          <div
+            id="mobile-menu"
+            role="dialog"
+            aria-label="Mobil naviqasiya menyusu"
+            className="absolute top-full left-0 w-full bg-primary z-50 h-screen p-5"
+          >
             <Container className="w-full flex flex-col gap-2">
-              <Link
-                href="/"
-                className="mobil-menu-item"
-                onClick={() => setOpen(false)}
-              >
-                Ana Səhifə
-              </Link>
-              <Link
-                href="/about"
-                className="mobil-menu-item"
-                onClick={() => setOpen(false)}
-              >
-                Haqqımızda
-              </Link>
-              <Link
-                href="/services"
-                className="mobil-menu-item"
-                onClick={() => setOpen(false)}
-              >
-                Xidmətlər
-              </Link>
-              <Link
-                href="/doctors"
-                className="mobil-menu-item"
-                onClick={() => setOpen(false)}
-              >
-                Həkimlər{" "}
-              </Link>
-              <Link
-                href="/media"
-                className="mobil-menu-item"
-                onClick={() => setOpen(false)}
-              >
-                Xəbərlər
-              </Link>
-              <Link
-                href="/galery"
-                className="mobil-menu-item"
-                onClick={() => setOpen(false)}
-              >
-                Qalereya
-              </Link>
-              {/* <Link
-                href="/contact"
-                className="mobil-menu-item"
-                onClick={() => setOpen(false)}
-              >
-                Əlaqə
-              </Link> */}
-
-              <div className=" border-b border-solid border-black/10 mt-5 mb-6 "></div>
-
-              {/* <div className="flex">
-                {" "}
-                <button
-                  onClick={handleScrollToTop}
-                  className={` bg-background text-white border border-background   cursor-pointer   px-4 py-3 font-500 rounded-[48px] flex items-center gap-3 transition-colors duration-300 ease-in-out`}
-                >
-                  <span>Randevu Al</span>
-                  <div
-                    className={`
-    w-9 h-9 rounded-full flex items-center justify-center
-    bg-white text-primary
-  `}
-                  >
-                    <RightArrow />
-                  </div>
-                </button>
-              </div> */}
+              <nav aria-label="Mobil naviqasiya">
+                <ul role="list" className="list-none m-0 p-0 flex flex-col gap-2">
+                  {navLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="mobil-menu-item"
+                        aria-current={pathname === link.href ? "page" : undefined}
+                        onClick={() => setOpen(false)}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+              <div className="border-b border-solid border-black/10 mt-5 mb-6" />
             </Container>
           </div>
         )}

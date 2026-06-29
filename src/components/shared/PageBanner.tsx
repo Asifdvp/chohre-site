@@ -41,11 +41,9 @@ const PageBanner = () => {
           )}
         </p>
         {/* {crumbs} */}
-        {bannerData[splitPath[1]]?.isVisible && (
-          <h1 className="text-[20px] text-black/80  leading-7 font-bold md:text-[32px] md:leading-10 mb-3 md:mb-4">
-            {bannerData[splitPath[1]] &&
-              !splitPath[2] &&
-              bannerData[splitPath[1]]?.title}
+        {bannerData[splitPath[1]]?.isVisible && !splitPath[2] && (
+          <h1 className="text-[20px] text-black/80 leading-7 font-bold md:text-[32px] md:leading-10 mb-3 md:mb-4">
+            {bannerData[splitPath[1]]?.title}
           </h1>
         )}
       </Container>

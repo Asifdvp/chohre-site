@@ -23,7 +23,7 @@ const TechnicalThings = () => {
           <div className="col-span-12 w-full relative md:col-span-8 h-65 rounded-md ">
             <Image
               src="/images/tech1.webp"
-              alt=""
+              alt="Çöhrə Estetik Klinikasında prosedur — müasir tibbi avadanlıq"
               fill
               className="object-cover object-bottom rounded-md"
             />
@@ -33,7 +33,7 @@ const TechnicalThings = () => {
           <div className="col-span-12w-full relative  md:col-span-4 h-65 rounded-md ">
             <Image
               src="/images/test.jpg"
-              alt=""
+              alt="Çöhrə Estetik Klinikası — klinika interyeri Bakı"
               fill
               className="object-cover rounded-md"
             />
@@ -43,7 +43,7 @@ const TechnicalThings = () => {
           <div className="col-span-12 md:col-span-4 h-55 w-full relative rounded-md ">
             <Image
               src="/images/test.jpg"
-              alt=""
+              alt="Çöhrə Estetik Klinikası — müalicə kabineti"
               fill
               className="object-cover rounded-md"
             />
@@ -52,7 +52,7 @@ const TechnicalThings = () => {
           <div className="col-span-12 md:col-span-8 h-55  w-full relative rounded-md ">
             <Image
               src="/images/tech1.webp"
-              alt=""
+              alt="Çöhrə Estetik Klinikasında estetik prosedur — Bakı"
               fill
               className="object-cover object-bottom rounded-md"
             />
@@ -86,7 +86,7 @@ const TechnicalThings = () => {
                           src={"/images/tech1.webp"}
                           fill
                           className="object-cover"
-                          alt="sdfsdf"
+                          alt="Çöhrə Estetik Klinikası qalereya — estetik prosedur"
                         />
                       </div>
                     </div>

@@ -21,8 +21,12 @@ const DepartmentCard = ({ img, name, text, link }: IProps) => {
         <p className="text-sm leading-5 font-normal text-text">{text}</p>
       </div>
       <div className="w-8 h-8 rounded-4xl flex justify-center items-center bg-primary">
-        <Link href={link} className="[&_svg_path]:fill-white ">
-          <ArrowIcon />
+        <Link
+          href={link}
+          className="[&_svg_path]:fill-white"
+          aria-label={`${name} haqqında ətraflı`}
+        >
+          <ArrowIcon aria-hidden="true" />
         </Link>
       </div>
     </div>

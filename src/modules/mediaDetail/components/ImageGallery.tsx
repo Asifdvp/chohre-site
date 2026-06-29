@@ -10,9 +10,10 @@ import { useEffect, useState } from "react";
 
 interface ImageGalleryProps {
   images: MediaImage[];
+  title?: string;
 }
 
-export default function ImageGallery({ images }: ImageGalleryProps) {
+export default function ImageGallery({ images, title }: ImageGalleryProps) {
   const [activeImage, setACtiveImage] = useState<MediaImage | null>(null);
 
   useEffect(() => {
@@ -29,9 +30,9 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
         {activeImage && (
           <Image
             src={activeImage.imageUrl}
-            alt="Main image"
+            alt={title ?? "Çöhrə Estetik Klinikası — məqalə şəkli"}
             fill
-            className=" object-cover  rounded-md"
+            className="object-cover rounded-md"
             sizes="100vw"
             priority
           />
@@ -59,7 +60,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                   <Image
                     src={img.imageUrl}
                     fill
-                    alt={`Thumbnail ${img.id}`}
+                    alt={title ? `${title} — şəkil ${img.id}` : `Şəkil ${img.id}`}
                     sizes="(max-width: 768px) 120px, 160px"
                     className={` rounded-md object-cover h-auto border-2  ${
                       img.id === activeImage?.id

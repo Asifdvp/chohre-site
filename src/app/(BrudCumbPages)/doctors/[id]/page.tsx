@@ -1,30 +1,107 @@
 import Container from "@/components/shared/Container";
 import DoctorDetailContent from "@/modules/doctorDetail/containers/DoctorDetailContent";
-// import seo from "@/lib/seo";
-// import DetailContent from "@/modules/mediaDetail/containers/DetailContent";
-// import OtherNews from "@/modules/mediaDetail/containers/OtherNews";
-// import { getMedia } from "@/modules/mediaDetail/data";
-// import { Metadata } from "next";
+import type { Metadata } from "next";
+import Script from "next/script";
+import doctors from "@/data/doctors.json";
 
 type Props = {
   params: Promise<{ id: string }>;
 };
 
-// export const generateMetadata = async ({
-//   params,
-// }: Props): Promise<Metadata> => {
-//   const { id } = await params;
+export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+  const { id } = await params;
+  const doctor = doctors.find((d) => d.id === Number(id));
 
-//   const media = await getMedia(id);
+  if (!doctor) {
+    return {
+      title: "Həkim — Çöhrə Estetik Klinikası",
+      description: "Çöhrə Estetik Klinikasının peşəkar həkimi.",
+    };
+  }
 
-//   // return seo({ title: `${media?.title ? media.title : "Media"}` });
-// };
+  return {
+    title: `${doctor.name} — ${doctor.specialty}`,
+    description: doctor.shortDescription,
+    alternates: {
+      canonical: `https://cohre.az/doctors/${id}`,
+    },
+    openGraph: {
+      title: `${doctor.name} — ${doctor.specialty} | Çöhrə Estetik Klinikası`,
+      description: doctor.shortDescription,
+      url: `https://cohre.az/doctors/${id}`,
+      images: [
+        {
+          url: doctor.image,
+          width: 400,
+          height: 400,
+          alt: `${doctor.name} — ${doctor.specialty}, Çöhrə Estetik Klinikası`,
+        },
+      ],
+    },
+  };
+};
 
 const NewsDetail = async ({ params }: Props) => {
   const { id } = await params;
+  const doctor = doctors.find((d) => d.id === Number(id));
+
+  const physicianSchema = doctor
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "@id": `https://cohre.az/doctors/${id}`,
+        name: doctor.name,
+        jobTitle: doctor.specialty,
+        description: doctor.shortDescription,
+        image: `https://cohre.az${doctor.image}`,
+        worksFor: {
+          "@type": "MedicalClinic",
+          name: "Çöhrə Estetik Klinikası",
+          url: "https://cohre.az",
+        },
+        url: `https://cohre.az/doctors/${id}`,
+      }
+    : null;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Ana səhifə",
+        item: "https://cohre.az",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Həkimlər",
+        item: "https://cohre.az/doctors",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: doctor?.name ?? "Həkim",
+        item: `https://cohre.az/doctors/${id}`,
+      },
+    ],
+  };
 
   return (
     <Container>
+      {physicianSchema && (
+        <Script
+          id="physician-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema) }}
+        />
+      )}
+      <Script
+        id="doctor-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <DoctorDetailContent id={id} />
     </Container>
   );

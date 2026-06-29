@@ -19,10 +19,12 @@ const MainSection = () => {
               </p>
               <Link
                 href={"/services"}
-                className="backdrop-blur-xl rounded-[48px] py-1.5 px-2 text-sm leading-5 flex  gap-2 items-center"
+                aria-label="Xidmətlərimizə baxın"
+                className="backdrop-blur-xl rounded-[48px] py-1.5 px-2 text-sm leading-5 flex gap-2 items-center"
               >
                 <span>Xidmətlər</span>
                 <div
+                  aria-hidden="true"
                   className={`bg-[linear-gradient(91.42deg,#7F9276.2%,#BFCDB4.04%)] w-9 h-9 rounded-full flex items-center justify-center text-white`}
                 >
                   <RightArrow />

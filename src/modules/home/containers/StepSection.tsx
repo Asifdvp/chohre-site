@@ -23,10 +23,10 @@ const StepSection = () => {
               daha sonra mövcud tarix və saatlardan uyğun olanını qeyd edin.
             </p>
             <div className=" hidden md:flex">  <Link
-            href={"/randevu"}
+            href={"tel:+994707086161"}
             className="py-1.5 px-4 flex items-center gap-3  bg-primary text-white rounded-[48px]"
           >
-            Randevu Al{" "}
+            Zəng Et{" "}
             <div className="w-9 h-9 bg-white rounded-full flex items-center justify-center [&_svg_path]:fill-primary">
               <ArrowIcon />
             </div>
@@ -66,10 +66,10 @@ const StepSection = () => {
           </div>
 
 <div className="flex md:hidden">  <Link
-            href={"/randevu"}
+            href={"tel:+994707086161"}
             className="py-1.5 px-4 flex items-center gap-3  bg-primary text-white rounded-[48px]"
           >
-            Randevu Al{" "}
+            Zəng Et{" "}
             <div className="w-9 h-9 bg-white rounded-full flex items-center justify-center [&_svg_path]:fill-primary">
               <ArrowIcon />
             </div>
@@ -89,20 +89,20 @@ const steps = [
     step: 1,
     title: "Həkimi seçin",
     description:
-      "Once the blood is collected, the phlebotomist will remove the needle and apply a bandage.",
+      "İxtisasına və təcrübəsinə görə sizə uyğun olan həkimi seçin. Hər həkimin profili ilə tanış ola bilərsiniz.",
   },
   {
     id: 2,
     step: 2,
     title: "Tarixi seçin",
     description:
-      "Once the blood is collected, the phlebotomist will remove the needle and apply a bandage.",
+      "Mövcud tarix və saatlar arasından sizə ən uyğun olan vaxtı seçin. Zəng edərək randevu alın: 070 708 61 61.",
   },
   {
     id: 3,
     step: 3,
-    title: "Təsdiqləyin",
+    title: "Konsultasiyaya gəlin",
     description:
-      "Once the blood is collected, the phlebotomist will remove the needle and apply a bandage.",
+      "Seçilmiş tarixdə klinikaya gəlin. Həkim sizi qəbul edəcək, müayinə aparacaq və fərdi müalicə planı hazırlayacaq.",
   },
 ];
