@@ -7,14 +7,14 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Əlaqə — Çöhrə Estetik Klinikası Bakı",
   description:
-    "Çöhrə Estetik Klinikası ilə əlaqə saxlayın. Ünvan: Kövkab Səfərəliyeva 2, Bakı. Tel: 070 708 61 61. İş saatları: Bazar.-Şənbə 09:00–18:00.",
+    "Çöhrə Estetik Klinikası ilə əlaqə saxlayın. Ünvan: Xocalı prospekti 65, Bakı. Tel: 070 708 61 61. İş saatları: Bazar.-Şənbə 10:00–19:00.",
   alternates: {
     canonical: "https://cohre.az/contact",
   },
   openGraph: {
     title: "Əlaqə — Çöhrə Estetik Klinikası",
     description:
-      "Kövkab Səfərəliyeva 2, Bakı. Tel: 070 708 61 61. Bazar.-Şənbə 09:00–18:00.",
+      "Xocalı prospekti 65, Bakı. Tel: 070 708 61 61. Bazar.-Şənbə 10:00–19:00.",
     url: "https://cohre.az/contact",
   },
 };

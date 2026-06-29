@@ -127,20 +127,20 @@ const Footer = () => {
 
                   <li className="flex items-center gap-2 cursor-pointer">
                     <a
-                      href="https://www.google.com/maps/search/?api=1&query=Kövkab+Səfərəliyeva+2,+Bakı,+Cohre+Estetik+Klinikası"
+                      href="https://www.google.com/maps?q=40.38327836982031,49.87860672902113"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 hover:text-primary transition-colors"
-                      aria-label="Xəritədə göstər: Kövkab Səfərəliyeva 2, Bakı (yeni sekmədə açılır)"
+                      aria-label="Xəritədə göstər: Xocalı prospekti 65, Bakı (yeni sekmədə açılır)"
                     >
                       <PointIcon aria-hidden="true" />
-                      <span>Kövkab Səfərəliyeva 2, Bakı</span>
+                      <span>Xocalı prospekti 65, Bakı</span>
                     </a>
                   </li>
 
                   <li className="flex items-center gap-2">
                     <ClockIcon aria-hidden="true" />
-                    <span>İş saatları: Bazar. – Şənbə, 09:00–18:00</span>
+                    <span>İş saatları: Bazar. – Şənbə, 10:00–19:00</span>
                   </li>
                 </ul>
               </address>

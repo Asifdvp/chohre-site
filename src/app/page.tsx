@@ -32,15 +32,15 @@ const medicalClinicSchema = {
   email: "chohreestetic@gmail.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Kövkab Səfərəliyeva küçəsi 2",
+    streetAddress: "65 Xocalı prospekti",
     addressLocality: "Bakı",
     addressRegion: "Bakı",
     addressCountry: "AZ",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "40.4093",
-    longitude: "49.8671",
+    latitude: "40.38327836982031",
+    longitude: "49.87860672902113",
   },
   openingHoursSpecification: [
     {
@@ -53,8 +53,8 @@ const medicalClinicSchema = {
         "Friday",
         "Saturday",
       ],
-      opens: "09:00",
-      closes: "18:00",
+      opens: "10:00",
+      closes: "19:00",
     },
   ],
   sameAs: [
