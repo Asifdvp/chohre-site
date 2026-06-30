@@ -1,6 +1,6 @@
-const CountCard = ({ count, text }: { count?: number; text: string }) => {
+const CountCard = ({ count, text, className }: { count?: number; text: string; className?: string }) => {
   return (
-    <div className="bg-white py-6 md:py-8  px-2 border-b-[#00CBFF]/12 border-r-[#00CBFF]/12 border-solid text-center ">
+    <div className={`bg-white py-6 md:py-8 px-2 border-solid text-center ${className ?? ""}`}>
       {" "}
       <p className="text-[16px] font-bold leading-6 text-primary  md:text-2xl md:mb-1  md:leading-8 text-center">
         {count}

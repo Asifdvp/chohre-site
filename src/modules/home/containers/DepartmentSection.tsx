@@ -10,62 +10,12 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-const DepartmentSection = () => {
-  // const partners = await getPartnes();
 
-  // const isFewPartners =
-  //   (partners?.length ?? 0) > 0 && (partners?.length ?? 0) < 5;
-  //   className={isFewPartners ? "flex justify-center" : ""}
-  return (
-    <div className="bg-background w-full py-7 px-2 md:py-11">
-      <Container>
-        <div className="flex items-center justify-between mb-3 md:mb-4">
-          <h2 className="text-black/80 text-[20px] leading-7 md:text-[32px] md:leading-8 font-bold">
-            Xidmətlərimiz{" "}
-          </h2>
-          <LinkButton text="Hamısı" href="/services" />
-        </div>
-
-        <Carousel
-          opts={{
-            loop: true,
-            align: "start",
-            containScroll: "trimSnaps",
-            dragFree: true,
-          }}
-          autoPlay
-          delay={3000}
-          className="w-full mt-4 max-w-[93vw] md:mt-6"
-        >
-          <CarouselContent>
-            {partners?.length &&
-              partners.map((partner) => (
-                <CarouselItem
-                  className="lg:basis-1/4 md:basis-1/3 basis-1/2 "
-                  key={partner.id}
-                >
-                  <DepartmentCard
-                    img={partner.img}
-                    name={partner.name}
-                    text={partner.text}
-                    link={partner.link}
-                  />
-                </CarouselItem>
-              ))}
-          </CarouselContent>
-        </Carousel>
-      </Container>
-    </div>
-  );
-};
-
-export default DepartmentSection;
-
-const partners = [
+const services = [
   {
     id: 1,
     name: "Üz və bədən estetikası",
-    img: <Radiologiya />, 
+    img: <Radiologiya />,
     text: "Dəri problemlərinin müalicəsi (akne, pigmentasiya, çapıq və s.)",
     link: "/services/1",
   },
@@ -80,14 +30,59 @@ const partners = [
     id: 3,
     name: "İnyeksiyon prosedurlar",
     img: <FirstHelp />,
-    text: "İnyeksiyon prosedurlar",
+    text: "Botoks, mezoterapiya, biorevitalizasiya və digər inyeksion müalicələr",
     link: "/services/3",
   },
   {
     id: 4,
     name: "Aparat kosmetologiyası",
     img: <Lab />,
-    text: "Aparat kosmetologiyası",
+    text: "Lazer epilyasiya, RF qaldırma, ultrasəs kavitasiya prosedurları",
     link: "/services/4",
   },
 ];
+
+const DepartmentSection = () => {
+  return (
+    <section aria-label="Xidmətlərimiz" className="bg-background w-full py-7 md:py-11">
+      <Container>
+        <div className="flex items-center justify-between mb-3 md:mb-4">
+          <h2 className="text-black/80 text-[20px] leading-7 md:text-[32px] md:leading-8 font-bold">
+            Xidmətlərimiz
+          </h2>
+          <LinkButton text="Hamısı" href="/services" />
+        </div>
+
+        <Carousel
+          opts={{
+            loop: true,
+            align: "start",
+            containScroll: "trimSnaps",
+            dragFree: true,
+          }}
+          autoPlay
+          delay={3000}
+          className="w-full mt-4 md:mt-6"
+        >
+          <CarouselContent>
+            {services.map((service) => (
+              <CarouselItem
+                key={service.id}
+                className="basis-[75%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+              >
+                <DepartmentCard
+                  img={service.img}
+                  name={service.name}
+                  text={service.text}
+                  link={service.link}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </Container>
+    </section>
+  );
+};
+
+export default DepartmentSection;

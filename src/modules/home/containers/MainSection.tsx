@@ -20,7 +20,7 @@ const MainSection = () => {
               <Link
                 href={"/services"}
                 aria-label="Xidmətlərimizə baxın"
-                className="backdrop-blur-xl rounded-[48px] py-1.5 px-2 text-sm leading-5 flex gap-2 items-center"
+                className="backdrop-blur-xl rounded-[48px] py-1.5 px-4 text-sm leading-5 flex gap-2 items-center"
               >
                 <span>Xidmətlər</span>
                 <div
